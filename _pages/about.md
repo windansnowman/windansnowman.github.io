@@ -250,6 +250,6 @@ Awards
 --------
 Award section is being updated.
 
-Talks
+Patents
 --------
-Talk section is being updated.
+Patent section is being updated.

@@ -337,6 +337,7 @@ Patents
     {% if item.status and item.status != "" %}({{ item.status }}){% endif %}
     {% if item.id and item.id != "" %}- {{ item.id }}{% endif %}
     {% if item.year and item.year != "" %}- {{ item.year }}{% endif %}
+    {% if item.inventors and item.inventors != "" %}- Inventors: {{ item.inventors }}{% endif %}
 {% endfor %}
 {% else %}
 Patent section is being updated.

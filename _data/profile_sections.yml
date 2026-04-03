@@ -1,17 +1,25 @@
 projects:
-  - title: "Project title"
-    summary: "One-line project summary."
+  - title: "2025.7-9 DeepSeek-R1-Safe large-scale training"
+    summary: "Large-scale training on 1024 Ascend GPUs."
     url: ""
     image: ""
 
 awards:
-  - title: "Award name"
-    year: "2026"
-    issuer: "Organization"
+  - title: "National First Prize in the National Undergraduate Information Security Competition"
+    year: "2025.8"
+    issuer: "National Undergraduate Information Security Competition"
 
 patents:
-  - title: "Patent title"
-    status: "Under Review"
+  - title: "基于模型偏置的卷积神经网络联邦学习后门防御方法"
+    status: "受理中"
     id: ""
-    year: "2026"
-    url: ""
+    year: "2025"
+    inventors: "杨易龙; 吴泽锋; 张博云; 刘洋; 董伟生; 马卓"
+    url: "https://pss-system.cponline.cnipa.gov.cn/documents/detail?prevPageTit=changgui"
+
+  - title: "基于梯度调节因子的卷积神经网络联邦学习后门攻击方法"
+    status: "已授权"
+    id: ""
+    year: "2025"
+    inventors: "马卓; 杨易龙; 吴泽锋; 刘洋; 杨昊"
+    url: "https://pss-system.cponline.cnipa.gov.cn/documents/detail?prevPageTit=changgui"

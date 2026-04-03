@@ -13,11 +13,6 @@ paperurl: "https://ieeexplore.ieee.org/abstract/document/11275864/"
 header:
   teaser: "/images/wzf_paper1.png"
 ---
-
-
-
-**Contribution**: first-student author
-
 **Links**:
 - [Paper](https://ieeexplore.ieee.org/abstract/document/11275864/)
 

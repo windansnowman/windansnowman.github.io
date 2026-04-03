@@ -12,11 +12,4 @@ contribution: "co-first"
 header:
   teaser: "/images/wzf_paper3.png"
 ---
-
-
-
-**Contribution**: co-first
-
-
-
 ![Figure](/images/wzf_paper3.png)

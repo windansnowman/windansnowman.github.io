@@ -9,7 +9,7 @@ redirect_from:
     .experience-card {
         display: flex;
         align-items: center;
-        background: #f9f9f9;
+        background: #f4fbfa;
         border-radius: 12px;
         padding: 16px;
         margin-bottom: 0px;
@@ -35,7 +35,7 @@ redirect_from:
     }
     .experience-info a {
         text-decoration: none;
-        color: #ca6f6f;
+        color: #0f766e;
     }
     .experience-container {
         display: grid;
@@ -49,9 +49,9 @@ redirect_from:
         display: flex;
         align-items: center;
         padding: 3px;
-        border: 1.5px solid #ddd;
+        border: 1.5px solid #cfe2df;
         border-radius: 8px;
-        background: #fff;
+        background: #ffffff;
         box-sizing: border-box;
         margin-bottom: 20px; 
         transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -79,9 +79,9 @@ redirect_from:
     }
 
     .pub-badge--oral {
-        color: #83a1c7;
-        background: rgba(131, 161, 199, 0.0);
-        border: 1px solid rgba(131, 161, 199, 0.7);
+        color: #1d7068;
+        background: rgba(15, 118, 110, 0.0);
+        border: 1px solid rgba(15, 118, 110, 0.6);
     }
     .publication-card:hover {
        
@@ -89,14 +89,14 @@ redirect_from:
     }
 
     .publication-card.featured {
-        border-color: #f5bba7;       /* 更浅的哈密瓜色边框 */
-        background: #fef5f1;         /* 非常浅的哈密瓜色背景 */
-        box-shadow: 0 4px 8px rgba(242, 166, 120, 0.2); /* 更柔和的初始阴影 */
+        border-color: #99d8cf;
+        background: #eef9f7;
+        box-shadow: 0 4px 8px rgba(15, 118, 110, 0.18);
         z-index: 10;
     }
 
     .publication-card.featured:hover {
-        box-shadow: 0 8px 16px rgba(242, 166, 120, 0.4); 
+        box-shadow: 0 8px 16px rgba(15, 118, 110, 0.3);
     }
     
     .publication-card.non-featured {
@@ -111,8 +111,8 @@ redirect_from:
     }
     
     .pub-button {
-        background-color: #f0f0f0;
-        border: 1px solid #ccc;
+        background-color: #ecf5f4;
+        border: 1px solid #b9d8d3;
         border-radius: 20px;
         padding: 8px 16px;
         cursor: pointer;
@@ -120,13 +120,13 @@ redirect_from:
     }
     
     .pub-button:hover {
-        background-color: #e0e0e0;
+        background-color: #dcefeb;
     }
     
     .pub-button.active {
-        background-color: #ca6f6f;
+        background-color: #0f766e;
         color: white;
-        border-color: #ca6f6f;
+        border-color: #0f766e;
     }
 
     /* Projects cards: keep styles independent from publications */
@@ -134,9 +134,9 @@ redirect_from:
         display: flex;
         align-items: center;
         padding: 3px;
-        border: 1.5px solid #ddd;
+        border: 1.5px solid #cfe2df;
         border-radius: 8px;
-        background: #fff;
+        background: #ffffff;
         box-sizing: border-box;
         margin-bottom: 20px;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -172,15 +172,15 @@ redirect_from:
         .main-heading {
             font-family: 'Permanent Marker', cursive;
             text-align: center;
-            color: #ca6f6f;
+            color: #0f766e;
         }
         div.markdown-body a,a {
             text-decoration: none !important;
-            color: #ca6f6f;
+            color: #0f766e;
             transition: all 0.3s ease; /* 平滑过渡效果 */
         }
         div.markdown-body a:hover, a:hover {
-            color: #c71585;            /* 悬浮时变深一点的颜色 */
+            color: #115e59;
             text-decoration: underline; /* 加上悬浮时的下划线 */
         }
     </style>
@@ -192,6 +192,13 @@ redirect_from:
 
 I am **Zefeng Wu (吴泽锋)**, a senior undergraduate in **Network Engineering** at **Xidian University**.
 I will soon begin my PhD journey in **Cyberspace Security** at **Zhejiang University**.
+
+I am currently advised by <a href="https://scholar.google.com/citations?hl=zh-CN&user=6Zu6W88AAAAJ&view_op=list_works&sortby=pubdate"><em>Yilong Yang</em></a>
+and <a href="https://scholar.google.com/citations?user=uU5Q0mMAAAAJ&hl=en"><em>Zhuo Ma</em></a> at Xidian University.
+My incoming PhD advisors at Zhejiang University are
+<a href="https://scholar.google.com/citations?user=Docv-hkAAAAJ&hl=en"><em>Tianhang Zheng</em></a>,
+<a href="https://scholar.google.com/citations?hl=en&user=5fa4lOQAAAAJ&view_op=list_works&sortby=pubdate"><em>Zhan Qin</em></a>, and
+<a href="https://scholar.google.com/citations?user=uuQA_rcAAAAJ&hl=en"><em>Kui Ren</em></a>.
 
 My current interests include **Federated Learning**, **LLM Alignment**, **Safety Pre-training**, and **Safety Fine-tuning**.
 
@@ -210,7 +217,7 @@ Education & Experience
     </div>
 
     <div class="experience-card">
-          <img src="images/XDU.png" alt="ZJU logo (replace with your own image)" class="experience-logo">
+          <img src="images\zju.png" alt="ZJU logo (replace with your own image)" class="experience-logo">
             <div class="experience-info">
                     <strong>Zhejiang University</strong><br>
                     Incoming PhD Student<br>

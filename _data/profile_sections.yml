@@ -11,15 +11,15 @@ awards:
 
 patents:
   - title: "基于模型偏置的卷积神经网络联邦学习后门防御方法"
-    status: "受理中"
+    status: "Application in progress"
     id: ""
-    year: "2025"
+    year: "2026"
     inventors: "杨易龙; 吴泽锋; 张博云; 刘洋; 董伟生; 马卓"
     url: "https://pss-system.cponline.cnipa.gov.cn/documents/detail?prevPageTit=changgui"
 
   - title: "基于梯度调节因子的卷积神经网络联邦学习后门攻击方法"
-    status: "已授权"
+    status: "Authorized"
     id: ""
-    year: "2025"
+    year: "2026"
     inventors: "马卓; 杨易龙; 吴泽锋; 刘洋; 杨昊"
     url: "https://pss-system.cponline.cnipa.gov.cn/documents/detail?prevPageTit=changgui"

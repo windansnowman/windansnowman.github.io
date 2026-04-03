@@ -238,7 +238,7 @@ Research Interests
 
 Publications
 --------
-The publication list is being updated.
+Two publications are now available on my publication page.
 
 You can find my papers on [Google Scholar](https://scholar.google.com/citations?user=7DTCT_YAAAAJ&hl=zh-CN).
 

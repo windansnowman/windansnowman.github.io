@@ -297,12 +297,47 @@ You can find my papers on [Google Scholar](https://scholar.google.com/citations?
 
 Projects
 --------
+{% if site.data.profile_sections.projects and site.data.profile_sections.projects.size > 0 %}
+{% for item in site.data.profile_sections.projects %}
+<div class="project-card">
+    <div style="display: flex; align-items: center;">
+        {% if item.image and item.image != "" %}
+            <img src="{{ item.image }}" alt="{{ item.title }}" width="200" height="110" style="margin-right: 20px; border-radius: 8px; object-fit: cover;">
+        {% endif %}
+        <div>
+            {% if item.url and item.url != "" %}
+                <strong><a href="{{ item.url }}">{{ item.title }}</a></strong><br>
+            {% else %}
+                <strong>{{ item.title }}</strong><br>
+            {% endif %}
+            {{ item.summary }}
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% else %}
 Project section is being updated.
+{% endif %}
 
 Awards
 --------
+{% if site.data.profile_sections.awards and site.data.profile_sections.awards.size > 0 %}
+{% for item in site.data.profile_sections.awards %}
+- {{ item.year }} - {{ item.title }}{% if item.issuer and item.issuer != "" %}, {{ item.issuer }}{% endif %}
+{% endfor %}
+{% else %}
 Award section is being updated.
+{% endif %}
 
 Patents
 --------
+{% if site.data.profile_sections.patents and site.data.profile_sections.patents.size > 0 %}
+{% for item in site.data.profile_sections.patents %}
+- {% if item.url and item.url != "" %}[{{ item.title }}]({{ item.url }}){% else %}{{ item.title }}{% endif %}
+    {% if item.status and item.status != "" %}({{ item.status }}){% endif %}
+    {% if item.id and item.id != "" %}- {{ item.id }}{% endif %}
+    {% if item.year and item.year != "" %}- {{ item.year }}{% endif %}
+{% endfor %}
+{% else %}
 Patent section is being updated.
+{% endif %}

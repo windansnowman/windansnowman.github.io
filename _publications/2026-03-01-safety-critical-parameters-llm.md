@@ -13,7 +13,7 @@ header:
   teaser: "/images/wzf_paper3.png"
 ---
 
-**Authors**: Weiwei Qi, Zefeng Wu, Tianhang Zheng, Zikang Zhang, Xiaojun Jia, Zhan Qin, Kui Ren
+
 
 **Contribution**: co-first
 

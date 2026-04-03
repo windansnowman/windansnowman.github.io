@@ -1,0 +1,17 @@
+projects:
+  - title: "Project title"
+    summary: "One-line project summary."
+    url: ""
+    image: ""
+
+awards:
+  - title: "Award name"
+    year: "2026"
+    issuer: "Organization"
+
+patents:
+  - title: "Patent title"
+    status: "Under Review"
+    id: ""
+    year: "2026"
+    url: ""

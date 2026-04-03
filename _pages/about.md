@@ -299,21 +299,7 @@ Projects
 --------
 {% if site.data.profile_sections.projects and site.data.profile_sections.projects.size > 0 %}
 {% for item in site.data.profile_sections.projects %}
-<div class="project-card">
-    <div style="display: flex; align-items: center;">
-        {% if item.image and item.image != "" %}
-            <img src="{{ item.image }}" alt="{{ item.title }}" width="200" height="110" style="margin-right: 20px; border-radius: 8px; object-fit: cover;">
-        {% endif %}
-        <div>
-            {% if item.url and item.url != "" %}
-                <strong><a href="{{ item.url }}">{{ item.title }}</a></strong><br>
-            {% else %}
-                <strong>{{ item.title }}</strong><br>
-            {% endif %}
-            {{ item.summary }}
-        </div>
-    </div>
-</div>
+- {% if item.year and item.year != "" %}{{ item.year }} - {% endif %}{% if item.url and item.url != "" %}[{{ item.title }}]({{ item.url }}){% else %}{{ item.title }}{% endif %}{% if item.summary and item.summary != "" %}: {{ item.summary }}{% endif %}
 {% endfor %}
 {% else %}
 Project section is being updated.

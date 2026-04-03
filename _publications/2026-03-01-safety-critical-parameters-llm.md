@@ -8,8 +8,5 @@ sort_key: "2026-003"
 venue: "ACL （CCF-A）Submission"
 authors: "Weiwei Qi, Zefeng Wu, Tianhang Zheng, Zikang Zhang, Xiaojun Jia, Zhan Qin, Kui Ren"
 contribution: "co-first"
-
-header:
-  teaser: "/images/wzf_paper3.png"
 ---
 ![Figure](/images/wzf_paper3.png)

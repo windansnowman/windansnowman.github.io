@@ -1,8 +1,13 @@
 projects:
-  - title: "2025.7-9 DeepSeek-R1-Safe large-scale training"
+  - year: "2025.7-9"
+    title: "DeepSeek-R1-Safe large-scale training"
     summary: "Large-scale training on 1024 Ascend GPUs."
     url: ""
-    image: ""
+
+  - year: "2025.8"
+    title: "M-FUSE: 面向多层级安全的高效数据隐私融合计算平台"
+    summary: ""
+    url: ""
 
 awards:
   - title: "National First Prize in the National Undergraduate Information Security Competition"

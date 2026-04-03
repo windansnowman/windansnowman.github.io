@@ -8,12 +8,6 @@ sort_key: "2025-001"
 venue: "TIFS（CCF-A）"
 authors: "Yilong Yang, Xinjing Liu, Zefeng Wu, Zhuoran Ma, Yong Zeng, Xianjia Meng, Zhuo Ma"
 contribution: "first-student author"
-
-paperurl: "https://ieeexplore.ieee.org/abstract/document/11275864/"
-header:
-  teaser: "/images/wzf_paper1.png"
 ---
 **Links**:
-- [Paper](https://ieeexplore.ieee.org/abstract/document/11275864/)
-
 ![Figure](/images/wzf_paper1.png)

@@ -173,7 +173,8 @@ foreach ($paper in $papers) {
   if (-not [string]::IsNullOrWhiteSpace($teaser)) { $body += ""; $body += "![Figure]($teaser)" }
 
   $content = ($front + $body) -join "`r`n"
-  Set-Content -Path $existingFile -Value $content -Encoding UTF8
+  $utf8NoBom = New-Object System.Text.UTF8Encoding($false)
+  [System.IO.File]::WriteAllText($existingFile, $content, $utf8NoBom)
   Write-Output "Synced: $existingFile"
 }
 

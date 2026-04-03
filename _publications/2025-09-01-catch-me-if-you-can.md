@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Catch Me If You Can: Retain High Stealthiness and Durability of Backdoor Attack in Federated Learning"
 collection: publications
 date: 2025-01-01

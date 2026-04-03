@@ -83,6 +83,28 @@ redirect_from:
         background: rgba(15, 118, 110, 0.0);
         border: 1px solid rgba(15, 118, 110, 0.6);
     }
+
+    .pub-badge--contrib {
+        color: #0f766e;
+        background: rgba(15, 118, 110, 0.08);
+        border: 1px solid rgba(15, 118, 110, 0.35);
+    }
+
+    .pub-authors {
+        font-size: 13px;
+        color: #4b5563;
+        line-height: 1.45;
+    }
+
+    .pub-meta {
+        margin-top: 4px;
+        margin-bottom: 6px;
+    }
+
+    .pub-actions a {
+        margin-right: 8px;
+        font-size: 14px;
+    }
     .publication-card:hover {
        
         box-shadow: 0 8px 16px rgba(0,0,0,0.1);
@@ -239,7 +261,7 @@ Research Interests
 Publications
 --------
 {% assign recent_pubs = site.publications | sort: "sort_key" | reverse %}
-{% for post in recent_pubs limit: 2 %}
+{% for post in recent_pubs limit: 5 %}
 <div class="publication-card featured">
     <div style="display: flex; align-items: center;">
         {% if post.header.teaser %}
@@ -251,13 +273,19 @@ Publications
             {% else %}
                 <strong><a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a></strong><br>
             {% endif %}
-            {% if post.authors %}<i style="font-size: 13px;">{{ post.authors }}</i><br>{% endif %}
-            {% if post.venue %}<b><i style="color:#1d7068;">{{ post.venue }}</i></b>{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}<br>{% endif %}
+            {% assign clean_authors = post.authors | replace_first: 'Authors:', '' | strip %}
+            {% if clean_authors %}<div class="pub-authors"><i>{{ clean_authors }}</i></div>{% endif %}
+            <div class="pub-meta">
+              {% if post.venue %}<b><i style="color:#1d7068;">{{ post.venue }}</i></b>{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}{% endif %}
+              {% if post.contribution %}<span class="pub-badge pub-badge--contrib">{{ post.contribution }}</span>{% endif %}
+            </div>
             {% if post.excerpt %}{{ post.excerpt }}<br>{% endif %}
-            {% if post.paperurl %}<a href="{{ post.paperurl }}"><em>[paper]</em></a>{% endif %}
-            {% if post.codeurl %} <a href="{{ post.codeurl }}"><em>[code]</em></a>{% endif %}
-            {% if post.projecturl %} <a href="{{ post.projecturl }}"><em>[project]</em></a>{% endif %}
-            {% if post.videourl %} <a href="{{ post.videourl }}"><em>[video]</em></a>{% endif %}
+            <div class="pub-actions">
+              {% if post.paperurl %}<a href="{{ post.paperurl }}"><em>[paper]</em></a>{% endif %}
+              {% if post.codeurl %}<a href="{{ post.codeurl }}"><em>[code]</em></a>{% endif %}
+              {% if post.projecturl %}<a href="{{ post.projecturl }}"><em>[project]</em></a>{% endif %}
+              {% if post.videourl %}<a href="{{ post.videourl }}"><em>[video]</em></a>{% endif %}
+            </div>
         </div>
     </div>
 </div>

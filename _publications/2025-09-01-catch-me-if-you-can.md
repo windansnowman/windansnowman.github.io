@@ -18,8 +18,6 @@ header:
 
 **Contribution**: first-student author
 
-**Summary**: This paper proposes ReBA, a backdoor attack against Federated Learning (FL) that improves stealthiness and durability. Unlike prior brute‑amplification or evasive strategies, ReBA uses an adaptive proactive boosting approach: (1) it computes a durable importance metric (via Fisher information) to assign higher update weights to backdoor‑related parameters, and (2) it adaptively tunes the amplification factor to keep malicious updates within the benign distance space. Experiments on three datasets and against 14 defenses show ReBA outperforms 12 baselines, achieving high attack success rates and significantly longer backdoor persistence, even with only one malicious client.
-
 **Links**:
 - [Paper](https://ieeexplore.ieee.org/abstract/document/11275864/)
 

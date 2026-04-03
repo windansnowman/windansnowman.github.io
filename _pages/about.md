@@ -217,7 +217,7 @@ Education & Experience
     </div>
 
     <div class="experience-card">
-          <img src="images\zju.png" alt="ZJU logo (replace with your own image)" class="experience-logo">
+                    <img src="images/zju.png" alt="ZJU logo" class="experience-logo">
             <div class="experience-info">
                     <strong>Zhejiang University</strong><br>
                     Incoming PhD Student<br>
@@ -238,7 +238,32 @@ Research Interests
 
 Publications
 --------
-Two publications are now available on my publication page.
+{% assign recent_pubs = site.publications | sort: "sort_key" | reverse %}
+{% for post in recent_pubs limit: 2 %}
+<div class="publication-card featured">
+    <div style="display: flex; align-items: center;">
+        {% if post.header.teaser %}
+            <img src="{{ base_path }}{{ post.header.teaser }}" alt="{{ post.title }}" width="200" height="110" style="margin-right: 20px; border-radius: 8px; object-fit: cover;">
+        {% endif %}
+        <div>
+            {% if post.paperurl %}
+                <strong><a href="{{ post.paperurl }}">{{ post.title }}</a></strong><br>
+            {% else %}
+                <strong><a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a></strong><br>
+            {% endif %}
+            {% if post.authors %}<i style="font-size: 13px;">{{ post.authors }}</i><br>{% endif %}
+            {% if post.venue %}<b><i style="color:#1d7068;">{{ post.venue }}</i></b>{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}<br>{% endif %}
+            {% if post.excerpt %}{{ post.excerpt }}<br>{% endif %}
+            {% if post.paperurl %}<a href="{{ post.paperurl }}"><em>[paper]</em></a>{% endif %}
+            {% if post.codeurl %} <a href="{{ post.codeurl }}"><em>[code]</em></a>{% endif %}
+            {% if post.projecturl %} <a href="{{ post.projecturl }}"><em>[project]</em></a>{% endif %}
+            {% if post.videourl %} <a href="{{ post.videourl }}"><em>[video]</em></a>{% endif %}
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+<p><a href="{{ base_path }}/publications/"><strong>See all publications</strong></a></p>
 
 You can find my papers on [Google Scholar](https://scholar.google.com/citations?user=7DTCT_YAAAAJ&hl=zh-CN).
 

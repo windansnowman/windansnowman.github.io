@@ -33,7 +33,7 @@ Notes:
 
 ## Paper 2
 Title:IOShift: Backdoor Defense via Model Bias Shift in Federated Learning
-Authors:Yilong Yang*, Zefeng Wu*, Yang Liu, Boyun Zhang, Weisheng Dong, Bin Xiao, Zhuo Ma
+Authors:Yilong Yang, Zefeng Wu, Yang Liu, Boyun Zhang, Weisheng Dong, Bin Xiao, Zhuo Ma
 Status/Venue:ACM MM（CCF-A）Submission 
 Year:2026
 Summary:This paper proposes IOSHift, a defense framework against backdoor attacks in federated learning. It reveals that backdoor implantation causes a measurable bias shift between in‑distribution (ID) and out‑of‑distribution (OOD) data: the model becomes overly confident on OOD data toward the target class while suppressing ID bias. IOSHift detects malicious updates by computing the IOSHift score (difference in soft‑label biases on ID vs. OOD data) and removes backdoors via adaptive pruning of neurons critical to the backdoor. Extensive experiments on CIFAR‑10 and Tiny‑ImageNet under non‑IID settings show that IOSHift outperforms state‑of‑the‑art defenses (e.g., FLAME, FDCR, Indicator, AlignIns) in true positive rate, false positive rate, and attack success rate reduction.
@@ -48,7 +48,7 @@ Media:
 - Image file:images\wzf_paper2.png
 
 Notes:
-- Contribution (first-author/co-first/corresponding):co-first
+- Contribution (first-author/co-first/corresponding):
 - Award/Oral/Spotlight:
 
 ---

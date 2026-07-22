@@ -261,7 +261,7 @@ Research Interests
 Publications
 --------
 {% assign recent_pubs = site.publications | sort: "sort_key" | reverse %}
-{% for post in recent_pubs limit: 3 %}
+{% for post in recent_pubs %}
 <div class="publication-card featured">
     <div style="display: flex; align-items: center;">
         {% if post.header.teaser %}

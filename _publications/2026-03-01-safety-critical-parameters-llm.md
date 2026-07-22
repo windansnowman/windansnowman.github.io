@@ -6,7 +6,7 @@ pub_year: 2026
 paper_id: 3
 sort_key: "2026-003"
 venue: "ACL （CCF-A）"
-authors: "Weiwei Qi, Zefeng Wu, Tianhang Zheng, Zikang Zhang, Xiaojun Jia, Zhan Qin, Kui Ren"
+authors: "Weiwei Qi*, Zefeng Wu*, Tianhang Zheng, Zikang Zhang, Xiaojun Jia, Zhan Qin, Kui Ren"
 contribution: "co-first"
 ---
 ![Figure](/images/wzf_paper3.png)

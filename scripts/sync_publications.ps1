@@ -55,6 +55,7 @@ foreach ($lineRaw in $lines) {
       Summary = ""
       PaperUrl = ""
       CodeUrl = ""
+      ModelUrl = ""
       ProjectUrl = ""
       VideoUrl = ""
       Teaser = ""
@@ -73,6 +74,7 @@ foreach ($lineRaw in $lines) {
 
   if ($line.StartsWith('- Paper:')) { $current.PaperUrl = Normalize-Link($line.Substring(8).Trim()); continue }
   if ($line.StartsWith('- Code:')) { $current.CodeUrl = Normalize-Link($line.Substring(7).Trim()); continue }
+  if ($line.StartsWith('- Model:')) { $current.ModelUrl = Normalize-Link($line.Substring(8).Trim()); continue }
   if ($line.StartsWith('- Project:')) { $current.ProjectUrl = Normalize-Link($line.Substring(10).Trim()); continue }
   if ($line.StartsWith('- Video:')) { $current.VideoUrl = Normalize-Link($line.Substring(8).Trim()); continue }
   if ($line.StartsWith('- Image file:')) { $current.Teaser = Normalize-ImagePath($line.Substring(13).Trim()); continue }
@@ -126,6 +128,7 @@ foreach ($paper in $papers) {
 
   $paperUrl = if ([string]::IsNullOrWhiteSpace($paper.PaperUrl)) { Normalize-Link (ReadField $existingRaw 'paperurl') } else { $paper.PaperUrl }
   $codeUrl = if ([string]::IsNullOrWhiteSpace($paper.CodeUrl)) { Normalize-Link (ReadField $existingRaw 'codeurl') } else { $paper.CodeUrl }
+  $modelUrl = if ([string]::IsNullOrWhiteSpace($paper.ModelUrl)) { Normalize-Link (ReadField $existingRaw 'modelurl') } else { $paper.ModelUrl }
   $projectUrl = if ([string]::IsNullOrWhiteSpace($paper.ProjectUrl)) { Normalize-Link (ReadField $existingRaw 'projecturl') } else { $paper.ProjectUrl }
   $videoUrl = if ([string]::IsNullOrWhiteSpace($paper.VideoUrl)) { Normalize-Link (ReadField $existingRaw 'videourl') } else { $paper.VideoUrl }
   $teaser = if ([string]::IsNullOrWhiteSpace($paper.Teaser)) { Normalize-ImagePath (ReadTeaser $existingRaw) } else { $paper.Teaser }
@@ -153,6 +156,7 @@ foreach ($paper in $papers) {
   if (-not [string]::IsNullOrWhiteSpace($paper.Summary)) { $front += ('excerpt: "{0}"' -f (Esc $paper.Summary)) }
   if (-not [string]::IsNullOrWhiteSpace($paperUrl)) { $front += ('paperurl: "{0}"' -f $paperUrl) }
   if (-not [string]::IsNullOrWhiteSpace($codeUrl)) { $front += ('codeurl: "{0}"' -f $codeUrl) }
+  if (-not [string]::IsNullOrWhiteSpace($modelUrl)) { $front += ('modelurl: "{0}"' -f $modelUrl) }
   if (-not [string]::IsNullOrWhiteSpace($projectUrl)) { $front += ('projecturl: "{0}"' -f $projectUrl) }
   if (-not [string]::IsNullOrWhiteSpace($videoUrl)) { $front += ('videourl: "{0}"' -f $videoUrl) }
   if (-not [string]::IsNullOrWhiteSpace($teaser)) { $front += "header:"; $front += ('  teaser: "{0}"' -f $teaser) }
@@ -166,6 +170,7 @@ foreach ($paper in $papers) {
   $links = @()
   if (-not [string]::IsNullOrWhiteSpace($paperUrl)) { $links += "- [Paper]($paperUrl)" }
   if (-not [string]::IsNullOrWhiteSpace($codeUrl)) { $links += "- [Code]($codeUrl)" }
+  if (-not [string]::IsNullOrWhiteSpace($modelUrl)) { $links += "- [Model]($modelUrl)" }
   if (-not [string]::IsNullOrWhiteSpace($projectUrl)) { $links += "- [Project]($projectUrl)" }
   if (-not [string]::IsNullOrWhiteSpace($videoUrl)) { $links += "- [Video]($videoUrl)" }
   if ($links.Count -gt 0) { $body += ""; $body += "**Links**:"; $body += $links }

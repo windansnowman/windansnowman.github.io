@@ -222,7 +222,7 @@ My incoming PhD advisors at Zhejiang University are
 <a href="https://scholar.google.com/citations?hl=en&user=5fa4lOQAAAAJ&view_op=list_works&sortby=pubdate"><em>Zhan Qin</em></a>, and
 <a href="https://scholar.google.com/citations?user=uuQA_rcAAAAJ&hl=en"><em>Kui Ren</em></a>.
 
-My current interests include **Federated Learning**, **LLM Alignment**, **Safety Pre-training**, and **Safety Fine-tuning**.
+My current interests include **LLM Alignment**, **Safety Pre-training**, **Safety Fine-tuning**, and **Federated Learning**.
 
 Education & Experience
 --------------
@@ -253,15 +253,15 @@ Education & Experience
 
 Research Interests
 --------
-- Federated Learning
 - LLM Alignment
 - Safety Pre-training
 - Safety Fine-tuning
+- Federated Learning
 
 Publications
 --------
 {% assign recent_pubs = site.publications | sort: "sort_key" | reverse %}
-{% for post in recent_pubs limit: 5 %}
+{% for post in recent_pubs limit: 3 %}
 <div class="publication-card featured">
     <div style="display: flex; align-items: center;">
         {% if post.header.teaser %}
@@ -283,6 +283,7 @@ Publications
             <div class="pub-actions">
               {% if post.paperurl %}<a href="{{ post.paperurl }}"><em>[paper]</em></a>{% endif %}
               {% if post.codeurl %}<a href="{{ post.codeurl }}"><em>[code]</em></a>{% endif %}
+              {% if post.modelurl %}<a href="{{ post.modelurl }}"><em>[model]</em></a>{% endif %}
               {% if post.projecturl %}<a href="{{ post.projecturl }}"><em>[project]</em></a>{% endif %}
               {% if post.videourl %}<a href="{{ post.videourl }}"><em>[video]</em></a>{% endif %}
             </div>

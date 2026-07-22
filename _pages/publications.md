@@ -71,6 +71,7 @@ author_profile: true
       <div class="pub-list-actions">
         {% if post.paperurl %}<a href="{{ post.paperurl }}"><em>[paper]</em></a>{% endif %}
         {% if post.codeurl %}<a href="{{ post.codeurl }}"><em>[code]</em></a>{% endif %}
+        {% if post.modelurl %}<a href="{{ post.modelurl }}"><em>[model]</em></a>{% endif %}
         {% if post.projecturl %}<a href="{{ post.projecturl }}"><em>[project]</em></a>{% endif %}
         {% if post.videourl %}<a href="{{ post.videourl }}"><em>[video]</em></a>{% endif %}
       </div>

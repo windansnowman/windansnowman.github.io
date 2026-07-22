@@ -64,7 +64,7 @@ Summary:This paper introduces the Expected Safety Impact (ESI) framework to iden
 
 Links:
 - Paper:
-- Code:
+- Code:https://github.com/ZJU-LLM-Safety/SafeWeights-ACL
 - Project:
 - Video:
 

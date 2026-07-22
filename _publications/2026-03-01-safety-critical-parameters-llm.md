@@ -8,5 +8,6 @@ sort_key: "2026-003"
 venue: "ACL （CCF-A）"
 authors: "Weiwei Qi*, Zefeng Wu*, Tianhang Zheng, Zikang Zhang, Xiaojun Jia, Zhan Qin, Kui Ren"
 contribution: "co-first"
+codeurl: "https://github.com/ZJU-LLM-Safety/SafeWeights-ACL"
 ---
 ![Figure](/images/wzf_paper3.png)

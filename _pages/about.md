@@ -224,6 +224,12 @@ My incoming PhD advisors at Zhejiang University are
 
 My current interests include **LLM Alignment**, **Safety Pre-training**, **Safety Fine-tuning**, and **Federated Learning**.
 
+News
+--------
+- **Aug. 2026** - One paper was accepted to **EMNLP 2026**.
+- **Apr. 2026** - One paper was accepted to **ACL 2026**.
+- **Nov. 2025** - One paper was accepted to **IEEE TIFS**.
+
 Education & Experience
 --------------
 <div class="experience-container">

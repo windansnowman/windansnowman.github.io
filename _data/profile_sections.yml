@@ -19,6 +19,23 @@ awards:
     issuer: "National Undergraduate Information Security Competition"
 
 patents:
+  - title: "一种微调数据的风险净化方法、电子设备及程序产品"
+    status: "Application in progress"
+    id: "CN122818372A"
+    publication_number: "CN122818372A"
+    year: "2026"
+    application_number: "CN202611047282.X"
+    application_date: "2026.07.14"
+    publication_date: "2026.09.25"
+    applicant: "杭州高新区（滨江）区块链与数据安全研究院"
+    inventors: "吴泽锋; 任奎; 郑天航; 齐巍巍; 秦湛"
+    country: "CN"
+    agent: "杨小龙"
+    agency: "深圳中一联合知识产权代理有限公司 44414"
+    ipc: "G06N3/045;G06F21/57;G06F40/30;G06N3/0499;G06F21/60"
+    abstract: "本申请适用于大语言模型技术领域，提供了一种微调数据的风险净化方法、电子设备及程序产品。方法包括：获取待风险净化的微调数据和若干个审校模型；针对每个审校模型，计算微调数据与该审校模型的安全行为谱域之间的第一对齐度，以及计算微调数据与该审校模型的风险行为谱域之间的第二对齐度；根据每个审校模型各自对应的第一对齐度和第二对齐度，确定微调数据的整体风险系数；根据整体风险系数，对微调数据进行风险净化处理。本方案根据多个审校模型共同确定得到的整体风险系数对微调数据进行风险净化处理，因此风险净化处理后的微调数据能够适用于不同类型的待微调大模型，扩大了风险净化处理后的微调数据的适用范围。"
+    url: ""
+
   - title: "基于模型偏置的卷积神经网络联邦学习后门防御方法"
     status: "Application in progress"
     id: ""

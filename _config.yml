@@ -8,10 +8,10 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Zefeng Wu / Personal Homepage"
+title                    : "Zefeng Wu"
 title_separator          : "-"
 name                     : Zefeng
-description              : &description "personal description"
+description              : &description "First-year PhD Student, Zhejiang University"
 url                      : https://windansnowman.github.io
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "windansnowman/windansnowman.github.io"
@@ -21,10 +21,10 @@ repository               : "windansnowman/windansnowman.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "wzf.png"
-  name             : "Zefeng Wu 吴泽锋"
+  avatar           : "/images/zefeng-wu.jpg"
+  name             : "Zefeng Wu"
   pronouns         : "He/Him"
-  bio              : "May the Force be with you."
+  bio              :
   location         : 
   employer         : 
   uri              : 
@@ -141,6 +141,12 @@ exclude:
   - Gemfile
   - Gruntfile.js
   - LICENSE
+  - LICENSE-ACADHOMEPAGE
+  - TEMPLATE.md
+  - PROFILE_SECTIONS_INPUT.md
+  - PUBLICATIONS_INPUT.md
+  - scripts
+  - .github
   - README
   - Rakefile
   - assets/js/_main.js
@@ -263,7 +269,7 @@ sass:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: America/Los_Angeles # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Shanghai # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins

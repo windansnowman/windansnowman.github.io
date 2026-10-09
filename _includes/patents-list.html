@@ -1,0 +1,8 @@
+<ul>
+{% for item in site.data.profile_sections.patents %}
+  <li>{{ item.title | escape }}
+    {% if item.status and item.status != "" %}({{ item.status | escape }}){% endif %}
+    {% if item.inventors and item.inventors != "" %}<br>Inventors: {{ item.inventors }}{% endif %}
+  </li>
+{% endfor %}
+</ul>

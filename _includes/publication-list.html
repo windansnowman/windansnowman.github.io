@@ -1,0 +1,16 @@
+{% assign sorted_pubs = site.publications | sort: "sort_key" | reverse %}
+{% for post in sorted_pubs %}
+    {% assign publication_url = post.url | relative_url %}
+    {% if post.projecturl and post.projecturl != "" %}{% assign publication_url = post.projecturl %}{% endif %}
+    {% if post.paperurl and post.paperurl != "" %}{% assign publication_url = post.paperurl %}{% endif %}
+<div class="paper-box"><div class="paper-box-image"><div><img src="{{ post.header.teaser | relative_url }}" alt="{{ post.title | escape }}" width="100%"></div></div>
+<div class="paper-box-text">
+<ul><li><a href="{{ publication_url | escape }}">{{ post.title | escape }}</a>, <br>
+{% assign clean_authors = post.authors | replace_first: 'Authors:', '' | strip %}
+{{ clean_authors | escape | replace: 'Zefeng Wu', '<strong>Zefeng Wu</strong>' }}<br>
+{% assign publication_separator = "" %}
+{% unless post.show_venue == false %}{% if post.venue or post.pub_year %}<strong>{% if post.venue %}{{ post.venue | escape }} {% endif %}{{ post.pub_year }}</strong>{% assign publication_separator = " | " %}{% endif %}{% endunless %}{% if post.paperurl and post.paperurl != "" %}{{ publication_separator }}<a href="{{ post.paperurl | escape }}"><strong>{{ post.paper_label | default: "Project" | escape }}</strong></a>{% assign publication_separator = " | " %}{% endif %}{% if post.codeurl and post.codeurl != "" %}{{ publication_separator }}<a href="{{ post.codeurl | escape }}">Github</a>{% assign publication_separator = " | " %}{% endif %}{% if post.modelurl and post.modelurl != "" %}{{ publication_separator }}<a href="{{ post.modelurl | escape }}">Model</a>{% assign publication_separator = " | " %}{% endif %}{% if post.projecturl and post.projecturl != "" %}{{ publication_separator }}<a href="{{ post.projecturl | escape }}"><strong>Project</strong></a>{% assign publication_separator = " | " %}{% endif %}{% if post.videourl and post.videourl != "" %}{{ publication_separator }}<a href="{{ post.videourl | escape }}">Video</a>{% endif %}
+</li></ul>
+</div>
+</div>
+{% endfor %}

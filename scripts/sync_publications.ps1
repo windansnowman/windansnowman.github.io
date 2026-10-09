@@ -51,6 +51,8 @@ foreach ($lineRaw in $lines) {
       Title = ""
       Authors = ""
       Venue = ""
+      ShowVenue = ""
+      PaperLabel = ""
       Year = ""
       Summary = ""
       PaperUrl = ""
@@ -69,6 +71,8 @@ foreach ($lineRaw in $lines) {
   if ($line.StartsWith('Title:')) { $current.Title = $line.Substring(6).Trim(); continue }
   if ($line.StartsWith('Authors:')) { $current.Authors = $line.Substring(8).Trim(); continue }
   if ($line.StartsWith('Status/Venue:')) { $current.Venue = $line.Substring(13).Trim(); continue }
+  if ($line.StartsWith('Show venue:')) { $current.ShowVenue = $line.Substring(11).Trim(); continue }
+  if ($line.StartsWith('Paper label:')) { $current.PaperLabel = $line.Substring(12).Trim(); continue }
   if ($line.StartsWith('Year:')) { $current.Year = $line.Substring(5).Trim(); continue }
   if ($line.StartsWith('Summary:')) { $current.Summary = $line.Substring(8).Trim(); continue }
 
@@ -151,6 +155,8 @@ foreach ($paper in $papers) {
     ('sort_key: "{0}"' -f $sortKey)
   )
   if (-not [string]::IsNullOrWhiteSpace($paper.Venue)) { $front += ('venue: "{0}"' -f (Esc $paper.Venue)) }
+  if ($paper.ShowVenue -eq 'false') { $front += 'show_venue: false' }
+  if (-not [string]::IsNullOrWhiteSpace($paper.PaperLabel)) { $front += ('paper_label: "{0}"' -f (Esc $paper.PaperLabel)) }
   if (-not [string]::IsNullOrWhiteSpace($paper.Authors)) { $front += ('authors: "{0}"' -f (Esc $paper.Authors)) }
   if (-not [string]::IsNullOrWhiteSpace($paper.Contribution)) { $front += ('contribution: "{0}"' -f (Esc $paper.Contribution)) }
   if (-not [string]::IsNullOrWhiteSpace($paper.Summary)) { $front += ('excerpt: "{0}"' -f (Esc $paper.Summary)) }
@@ -162,19 +168,8 @@ foreach ($paper in $papers) {
   if (-not [string]::IsNullOrWhiteSpace($teaser)) { $front += "header:"; $front += ('  teaser: "{0}"' -f $teaser) }
   $front += "---"
 
+  # The single layout renders publication metadata from front matter.
   $body = @()
-  if (-not [string]::IsNullOrWhiteSpace($paper.Authors)) { $body += ""; $body += "**Authors**: $($paper.Authors)" }
-  if (-not [string]::IsNullOrWhiteSpace($paper.Contribution)) { $body += ""; $body += "**Contribution**: $($paper.Contribution)" }
-  if (-not [string]::IsNullOrWhiteSpace($paper.Summary)) { $body += ""; $body += "**Summary**: $($paper.Summary)" }
-
-  $links = @()
-  if (-not [string]::IsNullOrWhiteSpace($paperUrl)) { $links += "- [Paper]($paperUrl)" }
-  if (-not [string]::IsNullOrWhiteSpace($codeUrl)) { $links += "- [Code]($codeUrl)" }
-  if (-not [string]::IsNullOrWhiteSpace($modelUrl)) { $links += "- [Model]($modelUrl)" }
-  if (-not [string]::IsNullOrWhiteSpace($projectUrl)) { $links += "- [Project]($projectUrl)" }
-  if (-not [string]::IsNullOrWhiteSpace($videoUrl)) { $links += "- [Video]($videoUrl)" }
-  if ($links.Count -gt 0) { $body += ""; $body += "**Links**:"; $body += $links }
-
   if (-not [string]::IsNullOrWhiteSpace($teaser)) { $body += ""; $body += "![Figure]($teaser)" }
 
   $content = ($front + $body) -join "`r`n"
